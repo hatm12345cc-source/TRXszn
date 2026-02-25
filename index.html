@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRX | الموقع الرسمي</title>
+    <style>
+        :root {
+            --bg: #050507;
+            --purple: #8e2de2;
+            --card: #0f0f13;
+            --accent: #00e5ff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0; padding: 0;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* أنيميشن الرقص */
+        @keyframes dance {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+
+        .dancing { animation: dance 2.5s ease-in-out infinite; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 5%; background: rgba(0,0,0,0.95);
+            border-bottom: 2px solid var(--purple);
+            position: sticky; top: 0; z-index: 1000;
+        }
+
+        .menu-btn { 
+            width: 50px; height: 50px; cursor: pointer; 
+            border-radius: 50%; border: 2px solid var(--purple); 
+            object-fit: cover;
+        }
+        
+        .logo { font-size: 28px; font-weight: bold; }
+        .logo span { color: var(--purple); }
+
+        .container { max-width: 600px; margin: 20px auto; padding: 15px; }
+
+        .section-title {
+            color: var(--accent); font-size: 26px; margin: 40px 0 20px;
+            font-weight: bold; text-shadow: 0 0 10px var(--purple);
+            padding-top: 80px; /* لضمان عدم اختفاء العنوان خلف الهيدر عند التنقل */
+        }
+
+        .main-img-trx {
+            width: 220px; height: 220px; border-radius: 35px;
+            margin-bottom: 20px; border: 3px solid var(--purple);
+            object-fit: cover; box-shadow: 0 0 20px rgba(142, 45, 226, 0.4);
+        }
+
+        .card {
+            background: var(--card); border-radius: 20px; padding: 15px;
+            border: 1px solid #222; margin-bottom: 25px; text-align: right;
+        }
+
+        .card img { width: 100%; border-radius: 15px; margin-bottom: 12px; border: 1px solid #333; }
+
+        .btn-install {
+            display: block; padding: 15px; border-radius: 12px;
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            color: white; text-decoration: none; font-weight: bold;
+            margin-top: 10px; text-align: center; font-size: 18px;
+            transition: 0.3s;
+        }
+        
+        .btn-nav {
+            background: #1a1a20; border: 1px solid var(--purple);
+            margin-bottom: 15px; cursor: pointer;
+        }
+
+        .btn-vn { background: linear-gradient(90deg, #00c6ff, #0072ff); margin-top: 5px; }
+
+        /* القائمة الجانبية (Overlay) */
+        #sideMenu {
+            display: none; position: fixed; top: 0; right: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+            z-index: 2000; flex-direction: column; justify-content: center;
+        }
+
+        .close-btn { position: absolute; top: 20px; left: 20px; font-size: 40px; cursor: pointer; }
+
+        footer { padding: 30px; color: #444; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://raw.githubusercontent.com/hatm12345cc-source/TRX/refs/heads/main/IMG_1996.png" class="menu-btn dancing" onclick="toggleMenu(true)">
+    <div class="logo">T<span>RX</span></div>
+</header>
+
+<div id="sideMenu">
+    <span class="close-btn" onclick="toggleMenu(false)">&times;</span>
+    <h2 style="color: var(--purple);">القائمة الرئيسية</h2>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <a onclick="scrollToSection('iosSection')" class="btn-install" style="width: 80%;">هاك روبلوكس ايفون 🍎</a>
+        <a onclick="scrollToSection('androidSection')" class="btn-install" style="width: 80%;">هاك روبلوكس اندرويد 🤖</a>
+        <a onclick="scrollToSection('pcSection')" class="btn-install" style="width: 80%;">هاك روبلوكس بي سي 💻</a>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div id="home">
+        <h1 class="section-title" style="padding-top: 20px;">مرحباً بكم في موقع TRX</h1>
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/krnl/refs/heads/main/32327A28-AEE3-4C73-902C-C6C91EED9868.png" class="main-img-trx dancing">
+        
+        <div class="card" style="text-align: center; border: none; background: transparent;">
+            <a onclick="scrollToSection('iosSection')" class="btn-install btn-nav">تطبيقات iOS (هاك روبلوكس والمزيد)</a>
+            <a onclick="scrollToSection('androidSection')" class="btn-install btn-nav">تطبيقات Android (أقوى هاكات الأندرويد)</a>
+            <a onclick="scrollToSection('pcSection')" class="btn-install btn-nav">تطبيقات PC (هاك روبلوكس للكمبيوتر)</a>
+            <a href="https://discord.gg/haX59nFsM" class="btn-install" style="background: #5865F2;">ديسكورد TRX 💬</a>
+        </div>
+    </div>
+
+    <hr style="border: 0.5px solid #222; margin: 50px 0;">
+
+    <h2 id="iosSection" class="section-title">(هاك الآيفون 🍎)</h2>
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_1929.png" class="dancing">
+        <h3>Delta iOS</h3>
+        <a href="itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist" class="btn-install">Install Delta</a>
+        <a href="https://nekoo.eu.org/W7dMvm" class="btn-install" style="background:#6a11cb;">Install Delta VR7</a>
+    </div>
+
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7/refs/heads/main/IMG_1935.jpeg" class="dancing">
+        <h3>SkibX iOS</h3>
+        <a href="itms-services://?action=download-manifest&url=https://skibx.com/ota.plist" class="btn-install">Install SkibX</a>
+    </div>
+
+    <h2 id="androidSection" class="section-title">(هاك الأندرويد 🤖)</h2>
+    <img src="https://raw.githubusercontent.com/hatm12345cc-source/krnl/refs/heads/main/IMG_1949.jpeg" style="width:100%; border-radius:15px; margin-bottom:20px;">
+
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/VN7xxz/refs/heads/main/IMG_1987.jpeg" class="dancing">
+        <h3>JJSploit & VN</h3>
+        <a href="https://www.mediafire.com/file/gqecdw99e5fyntq/JJSploit_64Bits-2.708.880.apk/file" class="btn-install">Install JJSploit</a>
+        <a href="https://www.mediafire.com/file/iuozigbm6coftwy/JJSploit_VNG_64Bits-2.707.735.apk/file" class="btn-install btn-vn">Install VN</a>
+    </div>
+
+    <h2 id="pcSection" class="section-title">(هاك الكمبيوتر 💻)</h2>
+    <div class="card">
+        <img src="https://raw.githubusercontent.com/hatm12345cc-source/SKINA/refs/heads/main/IMG_1972.jpeg" class="dancing">
+        <h3>Pro Hacker PC</h3>
+        <a href="https://gofile.io/d/6npfj8" class="btn-install">Install Pro Hacker</a>
+    </div>
+</div>
+
+<footer>TRX 511 | 2026 © جميع الحقوق محفوظة</footer>
+
+<script>
+    function toggleMenu(show) {
+        document.getElementById('sideMenu').style.display = show ? 'flex' : 'none';
+    }
+
+    function scrollToSection(sectionId) {
+        toggleMenu(false); // إغلاق القائمة عند الضغط
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+</body>
+</html>
