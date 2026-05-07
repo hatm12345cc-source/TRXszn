@@ -1,5 +1,5 @@
 --RELOAD GUI
-if game.CoreGui:FindFirstChild("SAB_HUB") then
+if game.CoreGui:FindFirstChild("MR_HUB") then
 	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "SAB HUB",Text = "السكربت شغال مسبقاً، أعد الدخول لتشغيله مرة أخرى",Duration = 5;})
 	return
 end
@@ -412,7 +412,7 @@ TitleBarLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TitleBarLabel.BorderSizePixel = 0
 TitleBarLabel.Size = UDim2.new(1, 0, 0, 30)
 TitleBarLabel.Font = Enum.Font.Unknown
-TitleBarLabel.Text = "________SAB HUB________"
+TitleBarLabel.Text = "      MR HUB   مملكه الدراك   "
 TitleBarLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 TitleBarLabel.TextScaled = true
 TitleBarLabel.TextSize = 14.000
@@ -937,7 +937,7 @@ Announce_Label.BorderSizePixel = 0
 Announce_Label.Position = UDim2.new(0, 25, 0, 150)
 Announce_Label.Size = UDim2.new(0, 350, 0, 150)
 Announce_Label.Font = Enum.Font.SourceSans
-Announce_Label.Text = "سكربت SAB HUB - نسخة معدلة بالكامل\nجميع الميزات تعمل بشكل طبيعي"
+Announce_Label.Text = "سكربت MR HUB - نسخة معدلة بالكامل\nجميع الميزات تعمل بشكل طبيعي"
 Announce_Label.TextColor3 = Color3.fromRGB(0, 255, 255)
 Announce_Label.TextSize = 24.000
 Announce_Label.TextWrapped = true
@@ -1137,7 +1137,7 @@ TargetName_Input.Position = UDim2.new(0, 150, 0, 30)
 TargetName_Input.Size = UDim2.new(0, 175, 0, 30)
 TargetName_Input.Font = Enum.Font.Gotham
 TargetName_Input.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-TargetName_Input.PlaceholderText = "@الهدف..."
+TargetName_Input.PlaceholderText = "@الاستهداف..."
 TargetName_Input.Text = ""
 TargetName_Input.TextColor3 = Color3.fromRGB(20, 20, 20)
 TargetName_Input.TextSize = 14.000
@@ -1193,7 +1193,7 @@ FlingTarget_Button.BorderSizePixel = 0
 FlingTarget_Button.Position = UDim2.new(0, 25, 0, 150)
 FlingTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FlingTarget_Button.Font = Enum.Font.Oswald
-FlingTarget_Button.Text = "قذف"
+FlingTarget_Button.Text = "فلنق قيد التطوير"
 FlingTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FlingTarget_Button.TextScaled = true
 FlingTarget_Button.TextSize = 14.000
@@ -1223,7 +1223,7 @@ BenxTarget_Button.BorderSizePixel = 0
 BenxTarget_Button.Position = UDim2.new(0, 210, 0, 200)
 BenxTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 BenxTarget_Button.Font = Enum.Font.Oswald
-BenxTarget_Button.Text = "بنش"
+BenxTarget_Button.Text = "اغتصاب"
 BenxTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 BenxTarget_Button.TextScaled = true
 BenxTarget_Button.TextSize = 14.000
@@ -1238,7 +1238,7 @@ PushTarget_Button.BorderSizePixel = 0
 PushTarget_Button.Position = UDim2.new(0, 25, 0, 400)
 PushTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 PushTarget_Button.Font = Enum.Font.Oswald
-PushTarget_Button.Text = "دفع"
+PushTarget_Button.Text = "قيد تطوير + ماندري وش نحط"
 PushTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 PushTarget_Button.TextScaled = true
 PushTarget_Button.TextSize = 14.000
@@ -1343,7 +1343,7 @@ DragTarget_Button.BorderSizePixel = 0
 DragTarget_Button.Position = UDim2.new(0, 25, 0, 350)
 DragTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 DragTarget_Button.Font = Enum.Font.Oswald
-DragTarget_Button.Text = "سحب"
+DragTarget_Button.Text = "قيد تطوير + ماندري وش نحط"
 DragTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 DragTarget_Button.TextScaled = true
 DragTarget_Button.TextSize = 14.000
