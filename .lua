@@ -1,6 +1,6 @@
 --RELOAD GUI
 if game.CoreGui:FindFirstChild("MR_HUB") then
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "SAB HUB",Text = "السكربت شغال مسبقاً، أعد الدخول لتشغيله مرة أخرى",Duration = 5;})
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MR HUB",Text = "السكربت شغال مسبقاً، أعد الدخول لتشغيله مرة أخرى",Duration = 5;})
 	return
 end
 local version = 2
@@ -1193,7 +1193,7 @@ FlingTarget_Button.BorderSizePixel = 0
 FlingTarget_Button.Position = UDim2.new(0, 25, 0, 150)
 FlingTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FlingTarget_Button.Font = Enum.Font.Oswald
-FlingTarget_Button.Text = "قيد تطوير ماندري وش نحط"
+FlingTarget_Button.Text = "فلنق عشوائي"
 FlingTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FlingTarget_Button.TextScaled = true
 FlingTarget_Button.TextSize = 14.000
@@ -1208,7 +1208,7 @@ FocusTarget_Button.BorderSizePixel = 0
 FocusTarget_Button.Position = UDim2.new(0, 25, 0, 200)
 FocusTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FocusTarget_Button.Font = Enum.Font.Oswald
-FocusTarget_Button.Text = "قيد تطوير ماندري وش نحط"
+FocusTarget_Button.Text = "قيد تطوير"
 FocusTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FocusTarget_Button.TextScaled = true
 FocusTarget_Button.TextSize = 14.000
@@ -1298,7 +1298,7 @@ StandTarget_Button.BorderSizePixel = 0
 StandTarget_Button.Position = UDim2.new(0, 25, 0, 250)
 StandTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 StandTarget_Button.Font = Enum.Font.Oswald
-StandTarget_Button.Text = "وقوف"
+StandTarget_Button.Text = "سوها عليه"
 StandTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 StandTarget_Button.TextScaled = true
 StandTarget_Button.TextSize = 14.000
