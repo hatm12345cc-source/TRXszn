@@ -2145,7 +2145,7 @@ end
 local function UpdateTarget(player)
 	pcall(function()
 		if table.find(ForceWhitelist,player.UserId) then
-			SendNotify("SAB HUB","لا يمكنك استهداف هذا اللاعب: @"..player.Name.." / "..player.DisplayName,5)
+			SendNotify("MR HUB","لا يمكنك استهداف هذا اللاعب: @"..player.Name.." / "..player.DisplayName,5)
 			player = nil
 		end
 	end)
@@ -2514,7 +2514,7 @@ end)
 CMDBar.FocusLost:Connect(function()
 	command = CMDBar.Text
 	Players:Chat(command)
-	SendNotify("SAB HUB",("تم تنفيذ "..command),5)
+	SendNotify("MR HUB",("تم تنفيذ "..command),5)
 	CMDBar.Text = ""
 end)
 
@@ -2527,7 +2527,7 @@ WalkSpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 16
 		end
 		plr.Character.Humanoid.WalkSpeed = tonumber(Speed)
-		SendNotify("SAB HUB","تم تحديث سرعة المشي.",5)
+		SendNotify("MR HUB","تم تحديث سرعة المشي.",5)
 	end)
 end)
 
@@ -2538,7 +2538,7 @@ JumpPower_Button.MouseButton1Click:Connect(function()
 			Power = 50
 		end
 		plr.Character.Humanoid.JumpPower = tonumber(Power)
-		SendNotify("SAB HUB","تم تحديث قوة القفز.",5)
+		SendNotify("MR HUB","تم تحديث قوة القفز.",5)
 	end)
 end)
 
@@ -2549,7 +2549,7 @@ FlySpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 50
 		end
 		FlySpeed = tonumber(Speed)
-		SendNotify("SAB HUB","تم تحديث سرعة الطيران.",5)
+		SendNotify("MR HUB","تم تحديث سرعة الطيران.",5)
 	end)
 end)
 
@@ -2562,12 +2562,12 @@ end)
 
 SaveCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = GetRoot(plr).Position
-	SendNotify("SAB HUB","تم حفظ النقطة.",5)
+	SendNotify("MR HUB","تم حفظ النقطة.",5)
 end)
 
 ClearCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = nil
-	SendNotify("SAB HUB","تم مسح النقطة.",5)
+	SendNotify("MR HUB","تم مسح النقطة.",5)
 end)
 
 local flying = true
@@ -2700,7 +2700,7 @@ ClickTargetTool_Button.MouseButton1Click:Connect(function()
 	GetTargetTool.Name = "ClickTarget"
 	GetTargetTool.RequiresHandle = false
 	GetTargetTool.TextureId = "rbxassetid://2716591855"
-	GetTargetTool.ToolTip = "تحديد الهدف"
+	GetTargetTool.ToolTip = "تحديد المستهدف"
 
 	local function ActivateTool()
 		local root = GetRoot(plr)
@@ -2961,10 +2961,10 @@ WhitelistTarget_Button.MouseButton1Click:Connect(function()
 					table.remove(ScriptWhitelist, i)
 				end
 			end
-			SendNotify("SAB HUB",TargetedPlayer.." تمت إزالته من القائمة البيضاء.",5)
+			SendNotify("MR HUB",TargetedPlayer.." تمت إزالته من القائمة البيضاء.",5)
 		else
 			table.insert(ScriptWhitelist, Players[TargetedPlayer].UserId)
-			SendNotify("SAB HUB",TargetedPlayer.." تمت إضافته إلى القائمة البيضاء.",5)
+			SendNotify("MR HUB",TargetedPlayer.." تمت إضافته إلى القائمة البيضاء.",5)
 		end
 	end
 end)
@@ -3380,7 +3380,7 @@ Day_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 14
 	else
-		SendNotify("SAB HUB","الرجاء إيقاف المؤثرات البصرية أولاً.",5)
+		SendNotify("MR HUB","الرجاء إيقاف المؤثرات البصرية أولاً.",5)
 	end
 end)
 
@@ -3388,7 +3388,7 @@ Night_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 19
 	else
-		SendNotify("SAB HUB","الرجاء إيقاف المؤثرات البصرية أولاً.",5)
+		SendNotify("MR HUB","الرجاء إيقاف المؤثرات البصرية أولاً.",5)
 	end
 end)
 
@@ -3416,7 +3416,7 @@ end)
 FreeEmotes_Button.MouseButton1Click:Connect(function()
 	if not FreeEmotesEnabled then
 		FreeEmotesEnabled = true
-		SendNotify("SAB HUB","جاري تحميل الحركات المجانية.")
+		SendNotify("MR HUB","جاري تحميل الحركات المجانية.")
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/AllEmotes"))()
 	end
 end)
@@ -3454,7 +3454,7 @@ Players.PlayerRemoving:Connect(function(player)
 	pcall(function()
 		if player.Name == TargetedPlayer then
 			UpdateTarget(nil)
-			SendNotify("SAB HUB","اللاعب المستهدف غادر السيرفر.",5)
+			SendNotify("MR HUB","اللاعب المستهدف غادر السيرفر.",5)
 		end
 	end)
 end)
@@ -3467,19 +3467,19 @@ plr.CharacterAdded:Connect(function(x)
 	end
 	if PotionDi_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionDi_Button)
-		SendNotify("SAB HUB","تم تعطيل وضعية الجرعة تلقائياً بسبب إعادة الولادة",5)
+		SendNotify("MR HUB","تم تعطيل وضعية الجرعة تلقائياً بسبب إعادة الولادة",5)
 	end
 	if PotionFling_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionFling_Button)
-		SendNotify("SAB HUB","تم تعطيل قذف الجرعة تلقائياً بسبب إعادة الولادة",5)
+		SendNotify("MR HUB","تم تعطيل قذف الجرعة تلقائياً بسبب إعادة الولادة",5)
 	end
 	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(AntiRagdoll_Button)
-		SendNotify("SAB HUB","تم تعطيل مضاد التهشيم تلقائياً بسبب إعادة الولادة",5)
+		SendNotify("MR HUB","تم تعطيل مضاد التهشيم تلقائياً بسبب إعادة الولادة",5)
 	end
 	if SpamMines_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(SpamMines_Button)
-		SendNotify("SAB HUB","تم تعطيل تفعيل الألغام تلقائياً بسبب إعادة الولادة",5)
+		SendNotify("MR HUB","تم تعطيل تفعيل الألغام تلقائياً بسبب إعادة الولادة",5)
 	end
 	if Fly_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(Fly_Button)
@@ -3487,7 +3487,7 @@ plr.CharacterAdded:Connect(function(x)
 		Fly_Pad.Visible = false
 		KeyDownFunction:Disconnect()
 		KeyUpFunction:Disconnect()
-		SendNotify("SAB HUB","تم تعطيل الطيران تلقائياً بسبب إعادة الولادة",5)
+		SendNotify("MR HUB","تم تعطيل الطيران تلقائياً بسبب إعادة الولادة",5)
 	end
 	x.Humanoid.Died:Connect(function()
 		pcall(function()
@@ -3521,12 +3521,12 @@ plr.CharacterAdded:Connect(function(x)
 		end
 		if not (count == original_ammount) then
 			SysBroker:Destroy()
-			SendNotify("SAB HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
+			SendNotify("MR HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
 			game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 		end
 	else
 		SysBroker:Destroy()
-		SendNotify("SAB HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
+		SendNotify("MR HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
 		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 	end
 	appearance:Destroy()
@@ -3559,16 +3559,16 @@ task.spawn(function()
 
 			if (plr.Name ~= original_name) or (plr.DisplayName ~= original_display) or (plr.UserId ~= plr.CharacterAppearanceId) then
 				SysBroker:Destroy()
-				SendNotify("SAB HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
+				SendNotify("MR HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 			end
 			if (date_1 ~= original_date) and (date_2 ~= original_date) and (date_3 ~= original_date) then
 				SysBroker:Destroy()
-				SendNotify("SAB HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
+				SendNotify("MR HUB","حدث خطأ غير متوقع، جاري إعادة الدخول...")
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 			end
 		end)
 	end
 end)
 
-SendNotify("SAB HUB","تم تحميل السكربت بنجاح - SAB HUB",10)
+SendNotify("MR HUB","تم تحميل السكربت بنجاح - SAB HUB",10)
