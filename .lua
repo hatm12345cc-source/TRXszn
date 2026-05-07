@@ -1208,12 +1208,9 @@ FocusTarget_Button.BorderSizePixel = 0
 FocusTarget_Button.Position = UDim2.new(0, 25, 0, 200)
 FocusTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FocusTarget_Button.Font = Enum.Font.Oswald
-FocusTarget_Button.Text = "تتبع"
-FocusTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-FocusTarget_Button.TextScaled = true
-FocusTarget_Button.TextSize = 14.000
-FocusTarget_Button.TextWrapped = true
-
+FocusTarget_Button.Text = "يمص"
+local B4, S4 = CreateToggleBtn("يمص", 160,
+	
 BenxTarget_Button.Name = "BenxTarget_Button"
 BenxTarget_Button.Parent = Target_Section
 BenxTarget_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
@@ -1226,7 +1223,7 @@ BenxTarget_Button.Font = Enum.Font.Oswald
 BenxTarget_Button.Text = "اغتصاب"
 BenxTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 BenxTarget_Button.TextScaled = true
-BenxTarget_Button.TextSize = 14.000
+BenxTarget_Button.TextSize = 160.000
 BenxTarget_Button.TextWrapped = true
 
 PushTarget_Button.Name = "PushTarget_Button"
