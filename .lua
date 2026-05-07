@@ -383,7 +383,7 @@ local function CreateClicker(Button)
 	NewClicker.Parent = Button
 end
 
-SysBroker.Name = "SAB_HUB"
+SysBroker.Name = "MR_HUB"
 SysBroker.Parent = game.CoreGui
 SysBroker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -412,7 +412,7 @@ TitleBarLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TitleBarLabel.BorderSizePixel = 0
 TitleBarLabel.Size = UDim2.new(1, 0, 0, 30)
 TitleBarLabel.Font = Enum.Font.Unknown
-TitleBarLabel.Text = "      MR HUB   مملكه الدراك   "
+TitleBarLabel.Text = "     MR HUB مملكه الدراك"
 TitleBarLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 TitleBarLabel.TextScaled = true
 TitleBarLabel.TextSize = 14.000
@@ -1193,7 +1193,7 @@ FlingTarget_Button.BorderSizePixel = 0
 FlingTarget_Button.Position = UDim2.new(0, 25, 0, 150)
 FlingTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FlingTarget_Button.Font = Enum.Font.Oswald
-FlingTarget_Button.Text = "فلنق قيد التطوير"
+FlingTarget_Button.Text = "قيد تطوير ماندري وش نحط"
 FlingTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FlingTarget_Button.TextScaled = true
 FlingTarget_Button.TextSize = 14.000
@@ -1208,9 +1208,12 @@ FocusTarget_Button.BorderSizePixel = 0
 FocusTarget_Button.Position = UDim2.new(0, 25, 0, 200)
 FocusTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FocusTarget_Button.Font = Enum.Font.Oswald
-FocusTarget_Button.Text = "يمص"
-local B4, S4 = CreateToggleBtn("يمص", 160,
-	
+FocusTarget_Button.Text = "قيد تطوير ماندري وش نحط"
+FocusTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+FocusTarget_Button.TextScaled = true
+FocusTarget_Button.TextSize = 14.000
+FocusTarget_Button.TextWrapped = true
+
 BenxTarget_Button.Name = "BenxTarget_Button"
 BenxTarget_Button.Parent = Target_Section
 BenxTarget_Button.BackgroundColor3 = Color3.fromRGB(0, 255, 255)
@@ -1235,7 +1238,7 @@ PushTarget_Button.BorderSizePixel = 0
 PushTarget_Button.Position = UDim2.new(0, 25, 0, 400)
 PushTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 PushTarget_Button.Font = Enum.Font.Oswald
-PushTarget_Button.Text = "قيد تطوير + ماندري وش نحط"
+PushTarget_Button.Text = "قيد التطوير ماندري وش نحط"
 PushTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 PushTarget_Button.TextScaled = true
 PushTarget_Button.TextSize = 14.000
@@ -1340,7 +1343,7 @@ DragTarget_Button.BorderSizePixel = 0
 DragTarget_Button.Position = UDim2.new(0, 25, 0, 350)
 DragTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 DragTarget_Button.Font = Enum.Font.Oswald
-DragTarget_Button.Text = "قيد تطوير + ماندري وش نحط"
+DragTarget_Button.Text = "قيد تطوير ماندري وش نحط"
 DragTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 DragTarget_Button.TextScaled = true
 DragTarget_Button.TextSize = 14.000
@@ -2155,7 +2158,7 @@ local function UpdateTarget(player)
 		UserIDTargetLabel.Text = ("المعرف: "..player.UserId.."\nالاسم الظاهر: "..player.DisplayName.."\nتاريخ الانضمام: "..os.date("%d-%m-%Y", os.time()-player.AccountAge * 24 * 3600))
 		TargetImage.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 	else
-		TargetName_Input.Text = "@الهدف..."
+		TargetName_Input.Text = "@الاستهداف..."
 		UserIDTargetLabel.Text = "المعرف: \nالاسم الظاهر: \nتاريخ الانضمام: "
 		TargetImage.Image = "rbxassetid://10818605405"
 		TargetedPlayer = nil
@@ -3571,4 +3574,4 @@ task.spawn(function()
 	end
 end)
 
-SendNotify("MR HUB","تم تحميل السكربت بنجاح - SAB HUB",10)
+SendNotify("MR HUB","تم تحميل السكربت بنجاح - MR HUB",10)
