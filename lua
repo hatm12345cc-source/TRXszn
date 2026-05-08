@@ -1137,7 +1137,7 @@ TargetName_Input.Position = UDim2.new(0, 150, 0, 30)
 TargetName_Input.Size = UDim2.new(0, 175, 0, 30)
 TargetName_Input.Font = Enum.Font.Gotham
 TargetName_Input.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-TargetName_Input.PlaceholderText = "@الاستهداف..."
+TargetName_Input.PlaceholderText = "@استهدفه..."
 TargetName_Input.Text = ""
 TargetName_Input.TextColor3 = Color3.fromRGB(20, 20, 20)
 TargetName_Input.TextSize = 14.000
@@ -2158,7 +2158,7 @@ local function UpdateTarget(player)
 		UserIDTargetLabel.Text = ("المعرف: "..player.UserId.."\nالاسم الظاهر: "..player.DisplayName.."\nتاريخ الانضمام: "..os.date("%d-%m-%Y", os.time()-player.AccountAge * 24 * 3600))
 		TargetImage.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 	else
-		TargetName_Input.Text = "@الاستهداف..."
+		TargetName_Input.Text = "@استهدفه ..."
 		UserIDTargetLabel.Text = "المعرف: \nالاسم الظاهر: \nتاريخ الانضمام: "
 		TargetImage.Image = "rbxassetid://10818605405"
 		TargetedPlayer = nil
