@@ -361,7 +361,15 @@ local Credits_Section = Instance.new("ScrollingFrame")
 local Credits_Label = Instance.new("TextLabel")
 local Crown = Instance.new("ImageLabel")
 local function AddToggleIndicator(Button)
-	local Toggle = Instance.new("ImageButton")
+	SideButton.Name = "SideButton"
+SideButton.Parent = SysBroker
+SideButton.Size = UDim2.new(0, 25, 0, 25)
+SideButton.Position = UDim2.new(1, -35, 0.5, -12)
+SideButton.BackgroundTransparency = 1
+SideButton.Image = "rbxassetid://90856351509127"
+SideButton.ImageColor3 = Color3.fromRGB(0, 100, 200)
+SideButton.ZIndex = 15
+end
 	Toggle.Name = "Toggle_LED"
 	Toggle.Parent = Button
 	Toggle.Size = UDim2.new(0, 12, 0, 12)
