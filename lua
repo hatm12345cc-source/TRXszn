@@ -360,7 +360,17 @@ local ChatBox_Input = Instance.new("TextBox")
 local Credits_Section = Instance.new("ScrollingFrame")
 local Credits_Label = Instance.new("TextLabel")
 local Crown = Instance.new("ImageLabel")
-local Assets = Instance.new("Folder")
+local function AddToggleIndicator(Button)
+	local Toggle = Instance.new("ImageButton")
+	Toggle.Name = "Toggle_LED"
+	Toggle.Parent = Button
+	Toggle.Size = UDim2.new(0, 12, 0, 12)
+	Toggle.Position = UDim2.new(1, -16, 0.5, -6)
+	Toggle.BackgroundTransparency = 1
+	Toggle.Image = "rbxassetid://90856351509127"
+	Toggle.ImageColor3 = Color3.fromRGB(255, 0, 0)
+	return Toggle
+end
 local Ticket_Asset = Instance.new("ImageButton")
 local Click_Asset = Instance.new("ImageButton")
 local Velocity_Asset = Instance.new("BodyAngularVelocity")
